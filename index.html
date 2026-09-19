@@ -7,25 +7,21 @@
     <meta name="description" content="Portafolio profesional de Juan Antonio Rodríguez - Ciencia de Datos, IA, Bioinformática y Fabricación Digital.">
     <style>
         :root {
-            /* Paleta Elegante Oscura */
             --bg-dark: #0f172a;
             --bg-card: #1e293b;
             --bg-card-hover: #334155;
             --accent-cyan: #38bdf8;
             --accent-emerald: #34d399;
-            --accent-purple: #c084fc;
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --white: #ffffff;
             
-            /* Espaciados */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 1.5rem;
             --space-lg: 2rem;
             --space-xl: 3rem;
             
-            /* Bordes y Sombras */
             --radius-md: 0.5rem;
             --radius-lg: 0.75rem;
             --radius-xl: 1rem;
@@ -55,7 +51,6 @@
             padding: 0 var(--space-lg);
         }
 
-        /* Encabezado y Navegación */
         header {
             position: fixed;
             top: 0;
@@ -98,7 +93,6 @@
             color: var(--accent-cyan);
         }
 
-        /* Sección Hero / Home */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -170,7 +164,6 @@
             color: var(--accent-cyan);
         }
 
-        /* Tarjeta Perfil */
         .profile-card {
             background: var(--bg-card);
             padding: var(--space-xl);
@@ -220,7 +213,6 @@
             text-decoration: none;
         }
 
-        /* Secciones Generales */
         .section {
             padding: 5rem 0;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -238,7 +230,6 @@
             margin-bottom: var(--space-xl);
         }
 
-        /* Rejillas y Tarjetas */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -288,7 +279,6 @@
             color: var(--accent-cyan);
         }
 
-        /* Tech Stack Tags */
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
@@ -305,11 +295,18 @@
             font-weight: 500;
         }
 
-        /* Proyectos */
         .project-card {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
         }
 
         .github-btn {
@@ -333,7 +330,6 @@
             color: var(--bg-dark);
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: var(--space-lg) 0;
@@ -342,7 +338,6 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive */
         @media (max-width: 900px) {
             .hero-content {
                 grid-template-columns: 1fr;
@@ -358,7 +353,6 @@
 </head>
 <body>
 
-    <!-- Navegación -->
     <header>
         <div class="container">
             <nav>
@@ -376,7 +370,7 @@
         </div>
     </header>
 
-    <!-- 1. HOME / HERO -->
+    <!-- HOME / HERO -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -388,13 +382,14 @@
                     </p>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn-primary">Ver Proyectos</a>
+                        <a href="./miCV.pdf" class="btn-secondary" download>Descargar CV</a>
                         <a href="#contact" class="btn-secondary">Contacto</a>
                     </div>
                 </div>
 
                 <div class="profile-card">
                     <div class="profile-image-container">
-                        <img src="./FotoPerfil.png" alt="Juan Antonio Rodríguez">
+                        <img src="./assets/images/profile.jpg" alt="Juan Antonio Rodríguez" onerror="this.src='./FotoPerfil.png'">
                     </div>
                     <div class="profile-info">
                         <h3>Juan Antonio Rodríguez</h3>
@@ -410,7 +405,7 @@
         </div>
     </section>
 
-    <!-- 2. EXPERTISE -->
+    <!-- EXPERTISE -->
     <section id="expertise" class="section">
         <div class="container">
             <h2 class="section-title">Expertise</h2>
@@ -447,7 +442,7 @@
         </div>
     </section>
 
-    <!-- 3. TECH STACK -->
+    <!-- TECH STACK -->
     <section id="stack" class="section">
         <div class="container">
             <h2 class="section-title">Tech Stack</h2>
@@ -489,7 +484,7 @@
         </div>
     </section>
 
-    <!-- 4. SKILLS -->
+    <!-- SKILLS -->
     <section id="skills" class="section">
         <div class="container">
             <h2 class="section-title">Skills</h2>
@@ -519,7 +514,7 @@
         </div>
     </section>
 
-    <!-- 5. PROJECTS -->
+    <!-- PROJECTS -->
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
@@ -528,6 +523,7 @@
             <div class="grid-3">
                 <div class="card project-card">
                     <div>
+                        <img src="./assets/images/project1.png" alt="Ajedrez y Miniaturas" class="project-img" onerror="this.style.display='none'">
                         <h3>Ajedrez y Miniaturas Anime</h3>
                         <p style="color: var(--text-secondary); font-size: 0.95rem;">Diseño y modelado 3D de piezas de ajedrez personalizadas y miniaturas con temática anime listos para fabricación digital.</p>
                         <div class="tech-tags" style="margin-top: 1rem;">
@@ -540,6 +536,7 @@
 
                 <div class="card project-card">
                     <div>
+                        <img src="./assets/images/project2.png" alt="Escaneo de Mascotas" class="project-img" onerror="this.style.display='none'">
                         <h3>Escaneo de Mascotas 3D</h3>
                         <p style="color: var(--text-secondary); font-size: 0.95rem;">Digitalización y procesamiento de mallas tridimensionales para la caracterización y personalización de mascotas.</p>
                         <div class="tech-tags" style="margin-top: 1rem;">
@@ -552,6 +549,7 @@
 
                 <div class="card project-card">
                     <div>
+                        <img src="./assets/images/project3.png" alt="Charolas de Restaurante" class="project-img" onerror="this.style.display='none'">
                         <h3>Charolas para Restaurantes</h3>
                         <p style="color: var(--text-secondary); font-size: 0.95rem;">Diseño CAD y desarrollo funcional de charolas de servicio enfocadas en el sector gastronómico.</p>
                         <div class="tech-tags" style="margin-top: 1rem;">
@@ -564,6 +562,7 @@
 
                 <div class="card project-card">
                     <div>
+                        <img src="./assets/images/project4.png" alt="Lámparas LED" class="project-img" onerror="this.style.display='none'">
                         <h3>Lámparas LED Personalizadas</h3>
                         <p style="color: var(--text-secondary); font-size: 0.95rem;">Modelado 3D de carcasas con integración de componentes y luminarias LED.</p>
                         <div class="tech-tags" style="margin-top: 1rem;">
@@ -577,7 +576,7 @@
         </div>
     </section>
 
-    <!-- 6. EXPERIENCE -->
+    <!-- EXPERIENCE -->
     <section id="experience" class="section">
         <div class="container">
             <h2 class="section-title">Experience & Academic Path</h2>
@@ -587,7 +586,7 @@
                 <div class="card">
                     <h3>Maestría en Inteligencia Artificial</h3>
                     <p style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem;">Especialización</p>
-                    <p style="color: var(--text-secondary);">Enfoque en desarrollo de algoritmos avanzadas, redes neuronales y resolución de problemas mediante IA.</p>
+                    <p style="color: var(--text-secondary);">Enfoque en desarrollo de algoritmos avanzados, redes neuronales y resolución de problemas mediante IA.</p>
                 </div>
 
                 <div class="card">
@@ -599,7 +598,7 @@
         </div>
     </section>
 
-    <!-- 7. CONTACT -->
+    <!-- CONTACT -->
     <section id="contact" class="section">
         <div class="container" style="text-align: center;">
             <h2 class="section-title">Contact</h2>
