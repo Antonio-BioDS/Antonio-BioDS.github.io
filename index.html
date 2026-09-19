@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Antonio Rodríguez - Portafolio</title>
+    <meta name="description"
+        content="Portafolio profesional de Juan Antonio Rodríguez - Ciencia de Datos, Inteligencia Artificial, Bioinformática y Fabricación Digital.">
+    <style>
+        :root {
+            /* Paleta de colores - Tonos Oscuros y Elegantes con Acentos */
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --accent-cyan: #38bdf8;
+            --accent-emerald: #34d399;
+            --accent-purple: #c084fc;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --white: #ffffff;
+
+            /* Espaciado */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+
+            /* Radio de bordes y sombras */
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        /* Encabezado y Navegación */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-md) 0;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Sección Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            padding-bottom: var(--space-xl);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.75rem;
+            line-height: 1.2;
+            margin-bottom: var(--space-sm);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+
+        .hero-description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: var(--space-lg);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--accent-cyan);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--text-secondary);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        /* Tarjeta Perfil */
+        .profile-card {
+            background: var(--bg-card);
+            padding: var(--space-xl);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-image-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto var(--space-md);
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent-cyan);
+        }
+
+        .profile-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .profile-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .contact-list {
+            text-align: left;
+            list-style: none;
+            display: flex;
+            flex-col;
+            gap: 0.75rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .contact-item a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        /* Secciones Generales */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            text-align: center;
+            margin-bottom: var(--space-sm);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+        }
+
+        /* Rejilla de Proyectos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: var(--bg-card-hover);
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .tech-tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-cyan);
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-md);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            width: fit-content;
+            transition: background 0.3s ease;
+        }
+
+        .github-btn:hover {
+            background: var(--accent-cyan);
+            color: var(--bg-dark);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: var(--space-lg) 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">Juan Antonio Rodríguez</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Científico de Datos Jr. | Mtro. en Inteligencia Artificial | Bioinformático</h1>
+                    <div class="hero-subtitle">Innovación, Análisis de Datos y Diseño Digital</div>
+                    <p class="hero-description">
+                        Apasionado por ofrecer soluciones de vanguardia para la obtención de conocimiento. Experiencia
+                        en ciencia de datos, modelado 3D e integración de tecnologías creativas.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn-primary">Ver Proyectos</a>
+                        <a href="#contact" class="btn-secondary">Contactar</a>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-image-container">
+                        <img src="./FotoPerfil.png" alt="Juan Antonio Rodríguez">
+                    </div>
+                    <div class="profile-info">
+                        <h3>Juan Antonio Rodríguez</h3>
+                        <p>Científico de Datos & Creador</p>
+                    </div>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            📍 CDMX, México
+                        </div>
+                        <div class="contact-item">
+                            💼 <a href="https://github.com/Antonio-BioDS" target="_blank">github.com/Antonio-BioDS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <p class="section-subtitle">Soluciones desarrolladas en modelado 3D, desarrollo y análisis de datos</p>
+
+            <div class="projects-grid">
+
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div>
+                        <h3 class="project-title">Ajedrez y Miniaturas Anime</h3>
+                        <p class="project-desc">Diseño y modelado 3D personalizado de piezas de ajedrez y miniaturas
+                            temáticas listo para fabricación digital.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Modelado 3D</span>
+                            <span class="tech-tag">Impresión 3D</span>
+                            <span class="tech-tag">Diseño</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">
+                        <span>Ver en GitHub</span> ↗
+                    </a>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div>
+                        <h3 class="project-title">Escaneo de Mascotas 3D</h3>
+                        <p class="project-desc">Digitalización y procesamiento de mallas 3D enfocadas en modelos de
+                            mascotas para personalización.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Escaneo 3D</span>
+                            <span class="tech-tag">Procesamiento Mallas</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">
+                        <span>Ver en GitHub</span> ↗
+                    </a>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div>
+                        <h3 class="project-title">Charolas para Restaurantes</h3>
+                        <p class="project-desc">Diseño funcional de charolas de servicio optimizadas para hostelería y
+                            restaurantes.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Diseño de Producto</span>
+                            <span class="tech-tag">CAD</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">
+                        <span>Ver en GitHub</span> ↗
+                    </a>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="project-card">
+                    <div>
+                        <h3 class="project-title">Lámparas LED Personalizadas</h3>
+                        <p class="project-desc">Modelado e integración de electrónica y luminarias LED en carcasas de
+                            diseño personalizado.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Electrónica Básica</span>
+                            <span class="tech-tag">Diseño LED</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">
+                        <span>Ver en GitHub</span> ↗
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>© 2026 Juan Antonio Rodríguez — Abierto a colaboraciones y puestos en Ciencia de Datos e IA.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
