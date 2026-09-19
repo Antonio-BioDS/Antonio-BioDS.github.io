@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Antonio Rodríguez - Portafolio</title>
-    <meta name="description"
-        content="Portafolio profesional de Juan Antonio Rodríguez - Ciencia de Datos, Inteligencia Artificial, Bioinformática y Fabricación Digital.">
+    <meta name="description" content="Portafolio profesional de Juan Antonio Rodríguez - Ciencia de Datos, IA, Bioinformática y Fabricación Digital.">
     <style>
         :root {
-            /* Paleta de colores - Tonos Oscuros y Elegantes con Acentos */
+            /* Paleta Elegante Oscura */
             --bg-dark: #0f172a;
             --bg-card: #1e293b;
             --bg-card-hover: #334155;
@@ -19,15 +17,15 @@
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --white: #ffffff;
-
-            /* Espaciado */
+            
+            /* Espaciados */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 1.5rem;
             --space-lg: 2rem;
             --space-xl: 3rem;
-
-            /* Radio de bordes y sombras */
+            
+            /* Bordes y Sombras */
             --radius-md: 0.5rem;
             --radius-lg: 0.75rem;
             --radius-xl: 1rem;
@@ -38,6 +36,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -72,7 +74,7 @@
         }
 
         .logo {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--accent-cyan);
             text-decoration: none;
@@ -81,13 +83,14 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: var(--space-lg);
+            gap: var(--space-md);
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--text-secondary);
             font-weight: 500;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
         }
 
@@ -95,7 +98,7 @@
             color: var(--accent-cyan);
         }
 
-        /* Sección Hero */
+        /* Sección Hero / Home */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -112,7 +115,7 @@
         }
 
         .hero-text h1 {
-            font-size: 2.75rem;
+            font-size: 2.5rem;
             line-height: 1.2;
             margin-bottom: var(--space-sm);
         }
@@ -126,7 +129,7 @@
 
         .hero-description {
             color: var(--text-secondary);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: var(--space-lg);
         }
 
@@ -144,9 +147,6 @@
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .btn-primary:hover {
@@ -196,7 +196,7 @@
         }
 
         .profile-info h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 0.25rem;
         }
 
@@ -208,21 +208,14 @@
 
         .contact-list {
             text-align: left;
-            list-style: none;
             display: flex;
-            flex-col;
+            flex-direction: column;
             gap: 0.75rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-secondary);
             font-size: 0.9rem;
+            color: var(--text-secondary);
         }
 
-        .contact-item a {
+        .contact-list a {
             color: var(--accent-cyan);
             text-decoration: none;
         }
@@ -230,12 +223,13 @@
         /* Secciones Generales */
         .section {
             padding: 5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .section-title {
             font-size: 2.25rem;
             text-align: center;
-            margin-bottom: var(--space-sm);
+            margin-bottom: var(--space-xs);
         }
 
         .section-subtitle {
@@ -244,55 +238,78 @@
             margin-bottom: var(--space-xl);
         }
 
-        /* Rejilla de Proyectos */
-        .projects-grid {
+        /* Rejillas y Tarjetas */
+        .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: var(--space-lg);
         }
 
-        .project-card {
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .card {
             background: var(--bg-card);
             border-radius: var(--radius-lg);
             padding: var(--space-lg);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             transition: transform 0.3s ease;
         }
 
-        .project-card:hover {
+        .card:hover {
             transform: translateY(-5px);
             background: var(--bg-card-hover);
         }
 
-        .project-title {
+        .card h3 {
+            color: var(--accent-cyan);
+            margin-bottom: var(--space-sm);
             font-size: 1.25rem;
-            color: var(--white);
-            margin-bottom: 0.5rem;
         }
 
-        .project-desc {
+        .card-list {
+            list-style: none;
+        }
+
+        .card-list li {
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: var(--space-md);
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.2rem;
         }
 
+        .card-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+        }
+
+        /* Tech Stack Tags */
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-bottom: var(--space-md);
+            margin-top: 0.5rem;
         }
 
         .tech-tag {
             background: rgba(56, 189, 248, 0.1);
             color: var(--accent-cyan);
-            padding: 0.2rem 0.6rem;
+            padding: 0.3rem 0.7rem;
             border-radius: var(--radius-md);
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 500;
+        }
+
+        /* Proyectos */
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .github-btn {
@@ -306,6 +323,7 @@
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
+            margin-top: var(--space-md);
             width: fit-content;
             transition: background 0.3s ease;
         }
@@ -324,51 +342,53 @@
             font-size: 0.9rem;
         }
 
-        /* Responsivo */
-        @media (max-width: 768px) {
+        /* Responsive */
+        @media (max-width: 900px) {
             .hero-content {
                 grid-template-columns: 1fr;
             }
-
             .hero-text h1 {
                 font-size: 2rem;
             }
-
             .nav-links {
                 display: none;
             }
         }
     </style>
 </head>
-
 <body>
 
+    <!-- Navegación -->
     <header>
         <div class="container">
             <nav>
                 <a href="#home" class="logo">Juan Antonio Rodríguez</a>
                 <ul class="nav-links">
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#stack">Tech Stack</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- 1. HOME / HERO -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Científico de Datos Jr. | Mtro. en Inteligencia Artificial | Bioinformático</h1>
-                    <div class="hero-subtitle">Innovación, Análisis de Datos y Diseño Digital</div>
+                    <div class="hero-subtitle">Ciencia de Datos, IA y Fabricación Digital</div>
                     <p class="hero-description">
-                        Apasionado por ofrecer soluciones de vanguardia para la obtención de conocimiento. Experiencia
-                        en ciencia de datos, modelado 3D e integración de tecnologías creativas.
+                        Apasionado por ofrecer soluciones de vanguardia para la obtención de conocimiento. Especializado en el análisis de datos complejos, inteligencia artificial y proyectos de desarrollo digital.
                     </p>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn-primary">Ver Proyectos</a>
-                        <a href="#contact" class="btn-secondary">Contactar</a>
+                        <a href="#contact" class="btn-secondary">Contacto</a>
                     </div>
                 </div>
 
@@ -381,100 +401,222 @@
                         <p>Científico de Datos & Creador</p>
                     </div>
                     <div class="contact-list">
-                        <div class="contact-item">
-                            📍 CDMX, México
-                        </div>
-                        <div class="contact-item">
-                            💼 <a href="https://github.com/Antonio-BioDS" target="_blank">github.com/Antonio-BioDS</a>
-                        </div>
+                        <div>📍 CDMX, México</div>
+                        <div>💼 <a href="https://github.com/Antonio-BioDS" target="_blank">github.com/Antonio-BioDS</a></div>
+                        <div>✉️ Open for collaborations</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section">
+    <!-- 2. EXPERTISE -->
+    <section id="expertise" class="section">
         <div class="container">
-            <h2 class="section-title">Proyectos Destacados</h2>
-            <p class="section-subtitle">Soluciones desarrolladas en modelado 3D, desarrollo y análisis de datos</p>
+            <h2 class="section-title">Expertise</h2>
+            <p class="section-subtitle">Áreas clave donde aporto valor y soluciones especializadas</p>
 
-            <div class="projects-grid">
-
-                <!-- Proyecto 1 -->
-                <div class="project-card">
-                    <div>
-                        <h3 class="project-title">Ajedrez y Miniaturas Anime</h3>
-                        <p class="project-desc">Diseño y modelado 3D personalizado de piezas de ajedrez y miniaturas
-                            temáticas listo para fabricación digital.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Modelado 3D</span>
-                            <span class="tech-tag">Impresión 3D</span>
-                            <span class="tech-tag">Diseño</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">
-                        <span>Ver en GitHub</span> ↗
-                    </a>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Ciencia de Datos & IA</h3>
+                    <ul class="card-list">
+                        <li>Modelado predictivo y aprendizaje automático (Machine Learning).</li>
+                        <li>Análisis de datos cuantitativos y cualitativos para extracción de conocimiento.</li>
+                        <li>Implementación de algoritmos de Inteligencia Artificial.</li>
+                    </ul>
                 </div>
 
-                <!-- Proyecto 2 -->
-                <div class="project-card">
+                <div class="card">
+                    <h3>Bioinformática</h3>
+                    <ul class="card-list">
+                        <li>Procesamiento y análisis de datos biológicos complejos.</li>
+                        <li>Manejo de secuencias y estructuras moleculares.</li>
+                        <li>Visualización e interpretación científica de resultados.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Diseño & Fabricación Digital</h3>
+                    <ul class="card-list">
+                        <li>Modelado y escaneo 3D avanzado.</li>
+                        <li>Optimización de piezas para impresión y manufactura 3D.</li>
+                        <li>Integración de soluciones físicas y creativas (LED, prototipos).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TECH STACK -->
+    <section id="stack" class="section">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+            <p class="section-subtitle">Herramientas y tecnologías que domino</p>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>PROGRAMACIÓN & DATA</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Scikit-Learn</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>IA & BIOINFORMÁTICA</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">TensorFlow / PyTorch</span>
+                        <span class="tech-tag">Biopython</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>DISEÑO 3D & HARDWARE</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">CAD / Modelado 3D</span>
+                        <span class="tech-tag">Escaneo 3D</span>
+                        <span class="tech-tag">Impresión 3D</span>
+                        <span class="tech-tag">Electrónica LED</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SKILLS -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-subtitle">Habilidades técnicas y profesionales</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>TECHNICAL SKILLS</h3>
+                    <ul class="card-list">
+                        <li>Desarrollo de pipeline de datos End-to-End.</li>
+                        <li>Procesamiento y limpieza de datos estructurados y no estructurados.</li>
+                        <li>Generación de modelos 3D y análisis de mallas complejas.</li>
+                        <li>Documentación de código clara, limpia y reproducible.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>SOFT & BUSINESS SKILLS</h3>
+                    <ul class="card-list">
+                        <li>Resolución analítica de problemas complejos.</li>
+                        <li>Traducción de requerimientos técnicos a aplicaciones prácticas.</li>
+                        <li>Pensamiento crítico y científico aplicado a negocios y proyectos.</li>
+                        <li>Trabajo en equipo y comunicación efectiva.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PROJECTS -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Selección de proyectos destacados en diseño, análisis y desarrollo</p>
+
+            <div class="grid-3">
+                <div class="card project-card">
                     <div>
-                        <h3 class="project-title">Escaneo de Mascotas 3D</h3>
-                        <p class="project-desc">Digitalización y procesamiento de mallas 3D enfocadas en modelos de
-                            mascotas para personalización.</p>
-                        <div class="tech-tags">
+                        <h3>Ajedrez y Miniaturas Anime</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Diseño y modelado 3D de piezas de ajedrez personalizadas y miniaturas con temática anime listos para fabricación digital.</p>
+                        <div class="tech-tags" style="margin-top: 1rem;">
+                            <span class="tech-tag">Modelado 3D</span>
+                            <span class="tech-tag">Impresión 3D</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">Ver en GitHub ↗</a>
+                </div>
+
+                <div class="card project-card">
+                    <div>
+                        <h3>Escaneo de Mascotas 3D</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Digitalización y procesamiento de mallas tridimensionales para la caracterización y personalización de mascotas.</p>
+                        <div class="tech-tags" style="margin-top: 1rem;">
                             <span class="tech-tag">Escaneo 3D</span>
                             <span class="tech-tag">Procesamiento Mallas</span>
                         </div>
                     </div>
-                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">
-                        <span>Ver en GitHub</span> ↗
-                    </a>
+                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">Ver en GitHub ↗</a>
                 </div>
 
-                <!-- Proyecto 3 -->
-                <div class="project-card">
+                <div class="card project-card">
                     <div>
-                        <h3 class="project-title">Charolas para Restaurantes</h3>
-                        <p class="project-desc">Diseño funcional de charolas de servicio optimizadas para hostelería y
-                            restaurantes.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Diseño de Producto</span>
-                            <span class="tech-tag">CAD</span>
+                        <h3>Charolas para Restaurantes</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Diseño CAD y desarrollo funcional de charolas de servicio enfocadas en el sector gastronómico.</p>
+                        <div class="tech-tags" style="margin-top: 1rem;">
+                            <span class="tech-tag">Diseño CAD</span>
+                            <span class="tech-tag">Producto</span>
                         </div>
                     </div>
-                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">
-                        <span>Ver en GitHub</span> ↗
-                    </a>
+                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">Ver en GitHub ↗</a>
                 </div>
 
-                <!-- Proyecto 4 -->
-                <div class="project-card">
+                <div class="card project-card">
                     <div>
-                        <h3 class="project-title">Lámparas LED Personalizadas</h3>
-                        <p class="project-desc">Modelado e integración de electrónica y luminarias LED en carcasas de
-                            diseño personalizado.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Electrónica Básica</span>
+                        <h3>Lámparas LED Personalizadas</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Modelado 3D de carcasas con integración de componentes y luminarias LED.</p>
+                        <div class="tech-tags" style="margin-top: 1rem;">
+                            <span class="tech-tag">Electrónica</span>
                             <span class="tech-tag">Diseño LED</span>
                         </div>
                     </div>
-                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">
-                        <span>Ver en GitHub</span> ↗
-                    </a>
+                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">Ver en GitHub ↗</a>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <footer id="contact">
+    <!-- 6. EXPERIENCE -->
+    <section id="experience" class="section">
         <div class="container">
-            <p>© 2026 Juan Antonio Rodríguez — Abierto a colaboraciones y puestos en Ciencia de Datos e IA.</p>
+            <h2 class="section-title">Experience & Academic Path</h2>
+            <p class="section-subtitle">Trayectoria académica y profesional</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Maestría en Inteligencia Artificial</h3>
+                    <p style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem;">Especialización</p>
+                    <p style="color: var(--text-secondary);">Enfoque en desarrollo de algoritmos avanzadas, redes neuronales y resolución de problemas mediante IA.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Bioinformática & Ciencia de Datos</h3>
+                    <p style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem;">Investigación & Desarrollo</p>
+                    <p style="color: var(--text-secondary);">Análisis de datos científicos complejos y aplicaciones en el ámbito de la salud y biotecnología.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT -->
+    <section id="contact" class="section">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">¿Interesado en colaborar o contratar en Ciencia de Datos e IA?</p>
+
+            <div style="margin-top: 2rem;">
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Abierto a colaboraciones y puestos de trabajo en Ciencia de Datos, Inteligencia Artificial y Bioinformática.</p>
+                <a href="https://github.com/Antonio-BioDS" target="_blank" class="btn-primary">Visitar Mi GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Juan Antonio Rodríguez — Built with passion for Data & Innovation</p>
         </div>
     </footer>
 
 </body>
-
 </html>
