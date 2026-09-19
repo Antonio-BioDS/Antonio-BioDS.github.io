@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Antonio Rodríguez - Portafolio</title>
-    <meta name="description" content="Portafolio profesional de Juan Antonio Rodríguez - Ciencia de Datos, IA, Bioinformática y Fabricación Digital.">
+    <title>Juan Antonio Rodríguez - Portfolio</title>
+    <meta name="description" content="Portfolio of Juan Antonio Rodríguez - Junior Data Scientist, MSc in AI & Bioinformatician specializing in Computer Vision, ML, and Multi-omics.">
     <style>
         :root {
+            /* Elegant Dark Palette */
             --bg-dark: #0f172a;
             --bg-card: #1e293b;
             --bg-card-hover: #334155;
@@ -16,12 +17,14 @@
             --text-secondary: #94a3b8;
             --white: #ffffff;
             
+            /* Spacing */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 1.5rem;
             --space-lg: 2rem;
             --space-xl: 3rem;
             
+            /* Borders and Shadows */
             --radius-md: 0.5rem;
             --radius-lg: 0.75rem;
             --radius-xl: 1rem;
@@ -51,6 +54,7 @@
             padding: 0 var(--space-lg);
         }
 
+        /* Navigation */
         header {
             position: fixed;
             top: 0;
@@ -93,6 +97,7 @@
             color: var(--accent-cyan);
         }
 
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -164,6 +169,7 @@
             color: var(--accent-cyan);
         }
 
+        /* Profile Card */
         .profile-card {
             background: var(--bg-card);
             padding: var(--space-xl);
@@ -213,6 +219,7 @@
             text-decoration: none;
         }
 
+        /* Sections General */
         .section {
             padding: 5rem 0;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -230,6 +237,7 @@
             margin-bottom: var(--space-xl);
         }
 
+        /* Grids & Cards */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -279,6 +287,7 @@
             color: var(--accent-cyan);
         }
 
+        /* Tech Stack Tags */
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
@@ -295,6 +304,7 @@
             font-weight: 500;
         }
 
+        /* Projects & Publications Buttons */
         .project-card {
             display: flex;
             flex-direction: column;
@@ -363,6 +373,7 @@
                     <li><a href="#stack">Tech Stack</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#publications">Publications</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -375,15 +386,15 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Científico de Datos Jr. | Mtro. en Inteligencia Artificial | Bioinformático</h1>
-                    <div class="hero-subtitle">Ciencia de Datos, IA y Fabricación Digital</div>
+                    <h1>Junior Data Scientist | MSc in AI | Bioinformatician</h1>
+                    <div class="hero-subtitle">Artificial Intelligence, Computer Vision & Biomedical Data Science</div>
                     <p class="hero-description">
-                        Apasionado por ofrecer soluciones de vanguardia para la obtención de conocimiento. Especializado en el análisis de datos complejos, inteligencia artificial y proyectos de desarrollo digital.
+                        Passionate about developing creative and cutting-edge solutions for knowledge extraction. Experienced in building Machine Learning/Deep Learning models and leveraging bioinformatics tools for multi-omics and biomedical image analysis.
                     </p>
                     <div class="cta-buttons">
-                        <a href="#projects" class="btn-primary">Ver Proyectos</a>
-                        <a href="./miCV.pdf" class="btn-secondary" download>Descargar CV</a>
-                        <a href="#contact" class="btn-secondary">Contacto</a>
+                        <a href="#projects" class="btn-primary">View Projects</a>
+                        <a href="./miCV.pdf" class="btn-secondary" download>Download CV</a>
+                        <a href="#contact" class="btn-secondary">Contact Me</a>
                     </div>
                 </div>
 
@@ -393,12 +404,12 @@
                     </div>
                     <div class="profile-info">
                         <h3>Juan Antonio Rodríguez</h3>
-                        <p>Científico de Datos & Creador</p>
+                        <p>Data Scientist & AI Researcher</p>
                     </div>
                     <div class="contact-list">
-                        <div>📍 CDMX, México</div>
+                        <div>📍 Mexico City, Mexico</div>
+                        <div>✉️ <a href="mailto:juanantonio_2604@hotmail.es">juanantonio_2604@hotmail.es</a></div>
                         <div>💼 <a href="https://github.com/Antonio-BioDS" target="_blank">github.com/Antonio-BioDS</a></div>
-                        <div>✉️ Open for collaborations</div>
                     </div>
                 </div>
             </div>
@@ -409,33 +420,33 @@
     <section id="expertise" class="section">
         <div class="container">
             <h2 class="section-title">Expertise</h2>
-            <p class="section-subtitle">Áreas clave donde aporto valor y soluciones especializadas</p>
+            <p class="section-subtitle">Core domains where I apply advanced data science and artificial intelligence</p>
 
             <div class="grid-3">
                 <div class="card">
-                    <h3>Ciencia de Datos & IA</h3>
+                    <h3>Artificial Intelligence & ML</h3>
                     <ul class="card-list">
-                        <li>Modelado predictivo y aprendizaje automático (Machine Learning).</li>
-                        <li>Análisis de datos cuantitativos y cualitativos para extracción de conocimiento.</li>
-                        <li>Implementación de algoritmos de Inteligencia Artificial.</li>
+                        <li>Supervised machine learning and predictive model development.</li>
+                        <li>Deep Learning model architecture design using PyTorch.</li>
+                        <li>Model interpretability and explainability techniques (SHAP).</li>
                     </ul>
                 </div>
 
                 <div class="card">
-                    <h3>Bioinformática</h3>
+                    <h3>Computer Vision</h3>
                     <ul class="card-list">
-                        <li>Procesamiento y análisis de datos biológicos complejos.</li>
-                        <li>Manejo de secuencias y estructuras moleculares.</li>
-                        <li>Visualización e interpretación científica de resultados.</li>
+                        <li>Biomedical image curation, annotation, and preprocessing.</li>
+                        <li>Evolutionary Deep Learning models for image synthesis and data augmentation.</li>
+                        <li>Generative approaches to support AI training pipeline readiness.</li>
                     </ul>
                 </div>
 
                 <div class="card">
-                    <h3>Diseño & Fabricación Digital</h3>
+                    <h3>Bioinformatics & Multi-Omics</h3>
                     <ul class="card-list">
-                        <li>Modelado y escaneo 3D avanzado.</li>
-                        <li>Optimización de piezas para impresión y manufactura 3D.</li>
-                        <li>Integración de soluciones físicas y creativas (LED, prototipos).</li>
+                        <li>Multi-omics dataset curation for ancestral cancer risk analysis.</li>
+                        <li>Statistical modeling and validation of complex biological hypotheses.</li>
+                        <li>High-throughput genomic data processing using R/Bioconductor and Python.</li>
                     </ul>
                 </div>
             </div>
@@ -446,38 +457,39 @@
     <section id="stack" class="section">
         <div class="container">
             <h2 class="section-title">Tech Stack</h2>
-            <p class="section-subtitle">Herramientas y tecnologías que domino</p>
+            <p class="section-subtitle">Technologies, frameworks, and tools I use daily</p>
 
             <div class="grid-3">
                 <div class="card">
-                    <h3>PROGRAMACIÓN & DATA</h3>
+                    <h3>AI & MACHINE LEARNING</h3>
                     <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">R</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">PyTorch</span>
                         <span class="tech-tag">Scikit-Learn</span>
+                        <span class="tech-tag">LightGBM</span>
+                        <span class="tech-tag">SHAP</span>
+                        <span class="tech-tag">LSTM Networks</span>
+                        <span class="tech-tag">Evolutionary DL</span>
                     </div>
                 </div>
 
                 <div class="card">
-                    <h3>IA & BIOINFORMÁTICA</h3>
+                    <h3>DATA SCIENCE & BIOINFORMATICS</h3>
                     <div class="tech-tags">
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Deep Learning</span>
-                        <span class="tech-tag">TensorFlow / PyTorch</span>
-                        <span class="tech-tag">Biopython</span>
+                        <span class="tech-tag">Python (Pandas, NumPy)</span>
+                        <span class="tech-tag">R / Bioconductor</span>
+                        <span class="tech-tag">SQL (PostgreSQL)</span>
+                        <span class="tech-tag">Data Mining</span>
+                        <span class="tech-tag">Matplotlib / Seaborn</span>
                     </div>
                 </div>
 
                 <div class="card">
-                    <h3>DISEÑO 3D & HARDWARE</h3>
+                    <h3>TOOLS & ENVIRONMENTS</h3>
                     <div class="tech-tags">
-                        <span class="tech-tag">CAD / Modelado 3D</span>
-                        <span class="tech-tag">Escaneo 3D</span>
-                        <span class="tech-tag">Impresión 3D</span>
-                        <span class="tech-tag">Electrónica LED</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">Bioinformatics Pipelines</span>
+                        <span class="tech-tag">Data Wrangling</span>
                     </div>
                 </div>
             </div>
@@ -488,26 +500,26 @@
     <section id="skills" class="section">
         <div class="container">
             <h2 class="section-title">Skills</h2>
-            <p class="section-subtitle">Habilidades técnicas y profesionales</p>
+            <p class="section-subtitle">Technical and professional competencies</p>
 
             <div class="grid-2">
                 <div class="card">
                     <h3>TECHNICAL SKILLS</h3>
                     <ul class="card-list">
-                        <li>Desarrollo de pipeline de datos End-to-End.</li>
-                        <li>Procesamiento y limpieza de datos estructurados y no estructurados.</li>
-                        <li>Generación de modelos 3D y análisis de mallas complejas.</li>
-                        <li>Documentación de código clara, limpia y reproducible.</li>
+                        <li>Scientific Data Curation & Annotation (Multi-Omics, Biomedical Images, Metadata).</li>
+                        <li>End-to-End ML/DL pipeline development and validation.</li>
+                        <li>Automation and optimization of computational workflows (reducing processing times up to 90%).</li>
+                        <li>Data mining, extraction, and database wrangling via SQL and Python.</li>
                     </ul>
                 </div>
 
                 <div class="card">
-                    <h3>SOFT & BUSINESS SKILLS</h3>
+                    <h3>SOFT & RESEARCH SKILLS</h3>
                     <ul class="card-list">
-                        <li>Resolución analítica de problemas complejos.</li>
-                        <li>Traducción de requerimientos técnicos a aplicaciones prácticas.</li>
-                        <li>Pensamiento crítico y científico aplicado a negocios y proyectos.</li>
-                        <li>Trabajo en equipo y comunicación efectiva.</li>
+                        <li>Clear communication of complex scientific findings to technical and non-technical stakeholders.</li>
+                        <li>Statistical hypothesis testing and biological domain analysis.</li>
+                        <li>Critical problem solving and scientific research methodology.</li>
+                        <li>Languages: Spanish (Native), English (Advanced / C1), German (Basic).</li>
                     </ul>
                 </div>
             </div>
@@ -518,59 +530,108 @@
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Selección de proyectos destacados en diseño, análisis y desarrollo</p>
+            <p class="section-subtitle">Selected technical projects in AI and Data Science</p>
 
-            <div class="grid-3">
+            <div class="grid-2">
+                <!-- Project 1: Telecom Retention -->
                 <div class="card project-card">
                     <div>
-                        <img src="./assets/images/project1.png" alt="Ajedrez y Miniaturas" class="project-img" onerror="this.style.display='none'">
-                        <h3>Ajedrez y Miniaturas Anime</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Diseño y modelado 3D de piezas de ajedrez personalizadas y miniaturas con temática anime listos para fabricación digital.</p>
+                        <img src="./assets/images/project1.png" alt="Customer Churn Prediction" class="project-img" onerror="this.style.display='none'">
+                        <h3>Predictive Customer Churn Model | TripleTen</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">
+                            Developed a supervised Machine Learning system to predict customer attrition in the telecommunications industry. Implemented model interpretability techniques using SHAP to identify key loss drivers, achieving a ROC-AUC score of 0.91.
+                        </p>
                         <div class="tech-tags" style="margin-top: 1rem;">
-                            <span class="tech-tag">Modelado 3D</span>
-                            <span class="tech-tag">Impresión 3D</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-Learn</span>
+                            <span class="tech-tag">LightGBM</span>
+                            <span class="tech-tag">SHAP</span>
                         </div>
                     </div>
-                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">Ver en GitHub ↗</a>
+                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">View on GitHub ↗</a>
+                </div>
+
+                <!-- Project 2: Transportation Data Mining -->
+                <div class="card project-card">
+                    <div>
+                        <img src="./assets/images/project2.png" alt="Data Wrangling & Extraction" class="project-img" onerror="this.style.display='none'">
+                        <h3>Data Extraction & Transportation Usage Patterns | TripleTen</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">
+                            Performed automated data extraction, cleaning, and mining on multi-source transportation datasets using SQL and Python. Discovered key usage patterns and high-demand routes to support revenue optimization strategies.
+                        </p>
+                        <div class="tech-tags" style="margin-top: 1rem;">
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Data Mining</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">View on GitHub ↗</a>
+                </div>
+
+                <!-- Project 3: AI Project Placeholder 1 -->
+                <div class="card project-card">
+                    <div>
+                        <img src="./assets/images/project3.png" alt="AI Project 1" class="project-img" onerror="this.style.display='none'">
+                        <h3>AI Project Title 1</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">
+                            [Add your project description here...]
+                        </p>
+                        <div class="tech-tags" style="margin-top: 1rem;">
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">PyTorch</span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="github-btn">View on GitHub ↗</a>
+                </div>
+
+                <!-- Project 4: AI Project Placeholder 2 -->
+                <div class="card project-card">
+                    <div>
+                        <img src="./assets/images/project4.png" alt="AI Project 2" class="project-img" onerror="this.style.display='none'">
+                        <h3>AI Project Title 2</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">
+                            [Add your project description here...]
+                        </p>
+                        <div class="tech-tags" style="margin-top: 1rem;">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="github-btn">View on GitHub ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title">Scientific Publications</h2>
+            <p class="section-subtitle">Peer-reviewed journal articles and research contributions</p>
+
+            <div class="grid-2">
+                <div class="card project-card">
+                    <div>
+                        <h3>Evolutionary Deep Learning Model for Biomedical Image Synthesis</h3>
+                        <p style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem;">Indexed Journal Article</p>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            Developed a novel Evolutionary Deep Learning framework that synthesizes high-quality biomedical images to augment limited AI training datasets and boost downstream model classification performance.
+                        </p>
+                    </div>
+                    <a href="#" target="_blank" class="github-btn">DOI / Publisher Link ↗</a>
                 </div>
 
                 <div class="card project-card">
                     <div>
-                        <img src="./assets/images/project2.png" alt="Escaneo de Mascotas" class="project-img" onerror="this.style.display='none'">
-                        <h3>Escaneo de Mascotas 3D</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Digitalización y procesamiento de mallas tridimensionales para la caracterización y personalización de mascotas.</p>
-                        <div class="tech-tags" style="margin-top: 1rem;">
-                            <span class="tech-tag">Escaneo 3D</span>
-                            <span class="tech-tag">Procesamiento Mallas</span>
-                        </div>
+                        <h3>Biomedical Image Database Augmentation for AI Model Training</h3>
+                        <p style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem;">Indexed Journal Article</p>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            Curated, annotated, and validated thousands of biomedical images and metadata, establishing a robust computational pipeline for generative models in biomedical research.
+                        </p>
                     </div>
-                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">Ver en GitHub ↗</a>
-                </div>
-
-                <div class="card project-card">
-                    <div>
-                        <img src="./assets/images/project3.png" alt="Charolas de Restaurante" class="project-img" onerror="this.style.display='none'">
-                        <h3>Charolas para Restaurantes</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Diseño CAD y desarrollo funcional de charolas de servicio enfocadas en el sector gastronómico.</p>
-                        <div class="tech-tags" style="margin-top: 1rem;">
-                            <span class="tech-tag">Diseño CAD</span>
-                            <span class="tech-tag">Producto</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">Ver en GitHub ↗</a>
-                </div>
-
-                <div class="card project-card">
-                    <div>
-                        <img src="./assets/images/project4.png" alt="Lámparas LED" class="project-img" onerror="this.style.display='none'">
-                        <h3>Lámparas LED Personalizadas</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Modelado 3D de carcasas con integración de componentes y luminarias LED.</p>
-                        <div class="tech-tags" style="margin-top: 1rem;">
-                            <span class="tech-tag">Electrónica</span>
-                            <span class="tech-tag">Diseño LED</span>
-                        </div>
-                    </div>
-                    <a href="https://github.com/Antonio-BioDS" target="_blank" class="github-btn">Ver en GitHub ↗</a>
+                    <a href="#" target="_blank" class="github-btn">DOI / Publisher Link ↗</a>
                 </div>
             </div>
         </div>
@@ -579,20 +640,45 @@
     <!-- EXPERIENCE -->
     <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title">Experience & Academic Path</h2>
-            <p class="section-subtitle">Trayectoria académica y profesional</p>
+            <h2 class="section-title">Professional Experience & Education</h2>
+            <p class="section-subtitle">Academic research background and professional path</p>
 
             <div class="grid-2">
                 <div class="card">
-                    <h3>Maestría en Inteligencia Artificial</h3>
-                    <p style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem;">Especialización</p>
-                    <p style="color: var(--text-secondary);">Enfoque en desarrollo de algoritmos avanzados, redes neuronales y resolución de problemas mediante IA.</p>
+                    <h3>Instituto Politécnico Nacional (IPN)</h3>
+                    <p style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem;">Research Student | 2023 - Present</p>
+                    <ul class="card-list">
+                        <li>Curated multi-omics datasets for ancestral cancer risk analysis, annotating genomic regions using R/Bioconductor and Python.</li>
+                        <li>Implemented state-of-the-art computational pipelines from peer-reviewed papers, slashing workflow execution times by 90% (Git, Linux, PyTorch).</li>
+                    </ul>
                 </div>
 
                 <div class="card">
-                    <h3>Bioinformática & Ciencia de Datos</h3>
-                    <p style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem;">Investigación & Desarrollo</p>
-                    <p style="color: var(--text-secondary);">Análisis de datos científicos complejos y aplicaciones en el ámbito de la salud y biotecnología.</p>
+                    <h3>TripleTen DS Certification</h3>
+                    <p style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem;">Student | 2025 - 2026</p>
+                    <ul class="card-list">
+                        <li>Extracted and validated telecom and transportation datasets for predictive analytics (SQL, Python).</li>
+                        <li>Applied machine learning algorithms, statistical analysis, and interpretability frameworks (SHAP).</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Universidad Veracruzana</h3>
+                    <p style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem;">Research Student | 2019 - 2021</p>
+                    <ul class="card-list">
+                        <li>Curated and annotated thousands of biomedical images and metadata to establish AI-ready databases.</li>
+                        <li>Developed a cutting-edge Evolutionary Deep Learning model for biomedical image synthesis (PyTorch, NumPy), published in 2 indexed journals.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Academic Degrees</h3>
+                    <p style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem;">Education Path</p>
+                    <ul class="card-list">
+                        <li><strong>PhD in Biomedicine & Molecular Biotechnology:</strong> IPN (In Progress).</li>
+                        <li><strong>MSc in Artificial Intelligence:</strong> Universidad Veracruzana (Cum Laude / Mención Honorífica).</li>
+                        <li><strong>BSc in Biotechnology:</strong> Universidad Veracruzana (Graduated with Honors by GPA).</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -602,18 +688,18 @@
     <section id="contact" class="section">
         <div class="container" style="text-align: center;">
             <h2 class="section-title">Contact</h2>
-            <p class="section-subtitle">¿Interesado en colaborar o contratar en Ciencia de Datos e IA?</p>
+            <p class="section-subtitle">Open for collaborations and roles in Data Science, AI, and Bioinformatics</p>
 
             <div style="margin-top: 2rem;">
-                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Abierto a colaboraciones y puestos de trabajo en Ciencia de Datos, Inteligencia Artificial y Bioinformática.</p>
-                <a href="https://github.com/Antonio-BioDS" target="_blank" class="btn-primary">Visitar Mi GitHub</a>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Feel free to reach out for opportunities in Data Science, Computer Vision, and Artificial Intelligence.</p>
+                <a href="mailto:juanantonio_2604@hotmail.es" class="btn-primary">Send Email</a>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>© 2026 Juan Antonio Rodríguez — Built with passion for Data & Innovation</p>
+            <p>© 2026 Juan Antonio Rodríguez — Built with passion for Data Science & AI</p>
         </div>
     </footer>
 
